@@ -1,1 +1,3 @@
-# ParcialBigdata1- Bryan Garavito
+#BIG DATA \
+#DAVID MELO 
+#VALENTINA GOMEZ
