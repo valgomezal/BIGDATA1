@@ -1,9 +1,7 @@
 import json
 import urllib3
 import boto3
-#Bryan Garavito
-#Creacion de la funcion que hace el scraping de la pagina del banco de la republica
-#y lo guarda en un archivo txt llamado dolar-timestamp.txt
+
 
 def lambda_handler(event, context):
     s3 = boto3.resource('s3')
