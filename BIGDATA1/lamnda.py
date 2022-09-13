@@ -2,8 +2,8 @@
 import json
 import boto3
 import datetime
-from scraping import lambda_handler1
-from PasarArchivoCvs import lambda_handler2
+from Scraping import lambda_handler1
+from Pasar import lambda_handler2
 
 def lambda_handler(event, context):
     #TODO implement
