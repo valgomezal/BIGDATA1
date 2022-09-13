@@ -12,7 +12,7 @@ def lambda_handler2():
     x2 = now2.strftime('%d %m %Y')
     
     s3 = boto3.resource('s3')
-    h=s3.Bucket('valgomez').download_file('dolar '+ x2 + '.txt', '/tmp/dolar.txt')
+    h=s3.Bucket('bigdatavalgoal').download_file('dolar '+ x2 + '.csv', '/tmp/dolar.csv')
     
     with open(h,'r',encoding = "utf-8") as a:
         for line in a:
@@ -21,9 +21,9 @@ def lambda_handler2():
     
     client= boto3.client("s3","us-east-1")
     s3= boto3.resource('s3')
-    bucket = s3.Bucket('dolarprocessed01')
+    bucket = s3.Bucket('bigdatavalgoal')
 
-    client.put_object(Body=h, Bucket='valgomez', Key ='dolar_processed_ '+ x2 + '.csv')
+    client.put_object(Body=h, Bucket='bigdatavalgoal', Key ='dolar_processed_ '+ x2 + '.csv')
 
     return{
         'statusCode':200,
